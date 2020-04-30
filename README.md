@@ -1,2 +1,3 @@
 # Tensorflow-Series
-Here you can find how to train Tensorflow ML model on various algorithms and Deploying these model on production.
+
+Here i will be posting more updates in coming weeks on Tensorflow algorithms , ML Model pipelines and examples to integrate with cloud services like AWS and Azure. ***Please star this repo for the new updates***.
