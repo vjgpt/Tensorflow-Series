@@ -3,6 +3,7 @@ import tensorflow as tf
 from tensorflow import keras
 import numpy as np
 import os
+import argparse
 import subprocess
 
 
@@ -28,7 +29,7 @@ if __name__ == '__main__':
     model_dir  = args.model_dir
     training_dir   = args.training
     validation_dir = args.validation
-
+    
     # Model Version
     VERSION = '00000123'
 
@@ -39,7 +40,7 @@ if __name__ == '__main__':
     train_labels = np.load(os.path.join(training_dir, 'training.npz'))['label']
     test_images  = np.load(os.path.join(validation_dir, 'validation.npz'))['image']
     test_labels  = np.load(os.path.join(validation_dir, 'validation.npz'))['label']
-
+    
     # reshape for feeding into the model
     train_images = train_images.reshape(train_images.shape[0], img_rows, img_cols, 1)
     test_images = test_images.reshape(test_images.shape[0], img_rows, img_cols, 1)
